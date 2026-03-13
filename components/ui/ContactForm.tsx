@@ -8,8 +8,10 @@ import { submitContactForm } from "@/app/actions/contact";
 declare global {
   interface Window {
     grecaptcha: {
-      ready: (cb: () => void) => void;
-      execute: (siteKey: string, opts: { action: string }) => Promise<string>;
+      enterprise: {
+        ready: (cb: () => void) => void;
+        execute: (siteKey: string, opts: { action: string }) => Promise<string>;
+      };
     };
   }
 }
@@ -96,12 +98,12 @@ export default function ContactForm() {
     setStatus("submitting");
 
     let recaptchaToken = "";
-    if (siteKey && typeof window !== "undefined" && window.grecaptcha) {
+    if (siteKey && typeof window !== "undefined" && window.grecaptcha?.enterprise) {
       try {
         recaptchaToken = await new Promise<string>((resolve, reject) => {
-          window.grecaptcha.ready(async () => {
+          window.grecaptcha.enterprise.ready(async () => {
             try {
-              const token = await window.grecaptcha.execute(siteKey, {
+              const token = await window.grecaptcha.enterprise.execute(siteKey, {
                 action: "contact_form",
               });
               resolve(token);

@@ -18,28 +18,58 @@ export interface ContactActionResult {
 }
 
 async function verifyRecaptcha(token: string): Promise<boolean> {
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  const projectId = process.env.RECAPTCHA_PROJECT_ID;
+  const apiKey = process.env.RECAPTCHA_API_KEY;
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  // Skip verification in development when no key is set
-  if (!secret) {
-    console.warn("[contact] RECAPTCHA_SECRET_KEY is not set — skipping verification.");
+  // Skip verification in development when credentials are not set
+  if (!projectId || !apiKey) {
+    console.warn("[contact] RECAPTCHA_PROJECT_ID or RECAPTCHA_API_KEY not set — skipping verification.");
     return true;
   }
 
   try {
-    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `secret=${encodeURIComponent(secret)}&response=${encodeURIComponent(token)}`,
-      cache: "no-store",
-    });
+    const response = await fetch(
+      `https://recaptchaenterprise.googleapis.com/v1/projects/${projectId}/assessments?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          event: {
+            token,
+            siteKey,
+            expectedAction: "contact_form",
+          },
+        }),
+        cache: "no-store",
+      }
+    );
+
+    if (!response.ok) {
+      console.error("[contact] reCAPTCHA Enterprise API error:", response.status, await response.text());
+      return false;
+    }
 
     const data = await response.json();
 
-    // reCAPTCHA v3: score >= 0.5 is considered human traffic
-    return data.success === true && (data.score ?? 0) >= 0.5;
+    // Token must be valid
+    if (data.tokenProperties?.valid !== true) {
+      console.warn("[contact] reCAPTCHA token invalid:", data.tokenProperties?.invalidReason);
+      return false;
+    }
+
+    // Action must match what the form submitted
+    const returnedAction = data.tokenProperties?.action;
+    if (returnedAction && returnedAction !== "contact_form") {
+      console.warn("[contact] reCAPTCHA action mismatch:", returnedAction);
+      return false;
+    }
+
+    // Score >= 0.5 is considered human traffic
+    const score: number = data.riskAnalysis?.score ?? 0;
+    return score >= 0.5;
   } catch (err) {
-    console.error("[contact] reCAPTCHA verification error:", err);
+    console.error("[contact] reCAPTCHA Enterprise verification error:", err);
     return false;
   }
 }

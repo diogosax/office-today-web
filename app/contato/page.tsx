@@ -20,7 +20,7 @@ export default function ContatoPage() {
 
       {siteKey && (
         <Script
-          src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
+          src={`https://www.google.com/recaptcha/enterprise.js?render=${siteKey}`}
           strategy="lazyOnload"
         />
       )}
