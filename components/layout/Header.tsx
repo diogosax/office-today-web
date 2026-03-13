@@ -11,8 +11,9 @@ const navLinks = [
   {
     label: "Serviços",
     children: [
-      { href: "/aluguel-de-computadores", label: "Aluguel de Computadores" },
-      { href: "/tecnologias-para-area-da-saude", label: "Tecnologias para Área da Saúde" },
+      { href: "/servicos/aluguel-de-computadores", label: "Aluguel de Computadores" },
+      { href: "/servicos/impressoras", label: "Impressoras" },
+      { href: "/servicos/tecnologias-para-area-da-saude", label: "Tecnologias para Área da Saúde" },
     ],
   },
   { href: "/blog", label: "Blog" },
@@ -219,10 +220,13 @@ export default function Header() {
             <p className="px-4 pt-3 pb-1 text-xs font-display font-600 uppercase tracking-widest text-ink-subtle">
               Serviços
             </p>
-            <NavLink href="/aluguel-de-computadores" mobile onClick={closeMobile}>
+            <NavLink href="/servicos/aluguel-de-computadores" mobile onClick={closeMobile}>
               Aluguel de Computadores
             </NavLink>
-            <NavLink href="/tecnologias-para-area-da-saude" mobile onClick={closeMobile}>
+            <NavLink href="/servicos/impressoras" mobile onClick={closeMobile}>
+              Impressoras
+            </NavLink>
+            <NavLink href="/servicos/tecnologias-para-area-da-saude" mobile onClick={closeMobile}>
               Tecnologias para Área da Saúde
             </NavLink>
           </div>

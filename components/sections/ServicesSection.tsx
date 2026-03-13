@@ -9,7 +9,7 @@ const services = [
     title: "Computadores",
     description:
       "Notebooks, desktops e tablets das melhores marcas, sempre atualizados, com gestão e manutenção inclusos.",
-    href: "/aluguel-de-computadores",
+    href: "/servicos/aluguel-de-computadores",
   },
   {
     illustration: "/images/illustrations/impressoras.svg",
@@ -18,7 +18,7 @@ const services = [
     title: "Impressoras",
     description:
       "Impressoras de escritório, térmicas e de alta produção. Epson, Xerox e Canon, com toner e manutenção por nossa conta.",
-    href: "/impressoras",
+    href: "/servicos/impressoras",
   },
   {
     illustration: "/images/illustrations/saude.svg",
@@ -27,7 +27,7 @@ const services = [
     title: "Área da Saúde",
     description:
       "Equipamentos, software e impressão especializados para clínicas, consultórios e hospitais.",
-    href: "/tecnologias-para-area-da-saude",
+    href: "/servicos/tecnologias-para-area-da-saude",
   },
 ];
 

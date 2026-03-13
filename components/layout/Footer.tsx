@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const serviceLinks = [
-  { href: "/aluguel-de-computadores", label: "Aluguel de Computadores" },
-  { href: "/tecnologias-para-area-da-saude", label: "Tecnologias para Área da Saúde" },
+  { href: "/servicos/aluguel-de-computadores", label: "Aluguel de Computadores" },
+  { href: "/servicos/impressoras", label: "Impressoras" },
+  { href: "/servicos/tecnologias-para-area-da-saude", label: "Tecnologias para Área da Saúde" },
 ];
 
 const companyLinks = [
@@ -12,11 +13,16 @@ const companyLinks = [
   { href: "/contato", label: "Contato" },
 ];
 
+const legalLinks = [
+  { href: "/politica-de-privacidade", label: "Política de Privacidade" },
+  { href: "/termos-de-servico", label: "Termos de Serviço" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-surface-dark text-white" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" aria-label="Office Today — Página inicial">
@@ -77,6 +83,25 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/70 hover:text-white transition-colors duration-150"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="font-display font-700 text-sm uppercase tracking-wider text-white/50 mb-4">
+              Legal
+            </h3>
+            <ul className="space-y-3">
+              {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
