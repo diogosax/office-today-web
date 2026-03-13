@@ -1,6 +1,6 @@
 "use server";
 
-import { Resend } from "resend";
+import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 
 export interface ContactFormData {
   name: string;
@@ -88,6 +88,39 @@ function buildEmailHtml(data: Omit<ContactFormData, "recaptchaToken">): string {
 </html>`;
 }
 
+function buildEmailText(data: Omit<ContactFormData, "recaptchaToken">): string {
+  return [
+    "Novo contato via website — Office Today",
+    "",
+    `Nome: ${data.name}`,
+    `Empresa: ${data.company}`,
+    `E-mail: ${data.email}`,
+    `Telefone: ${data.phone || "—"}`,
+    `Serviço de interesse: ${data.service}`,
+    "",
+    "Mensagem:",
+    data.message,
+    "",
+    "---",
+    "Enviado via formulário de contato — office-today.com",
+  ].join("\n");
+}
+
+function getSESClient(): SESClient {
+  const region = process.env.AWS_REGION;
+  const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+  const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
+
+  if (!region || !accessKeyId || !secretAccessKey) {
+    throw new Error("Missing AWS SES environment variables (AWS_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY).");
+  }
+
+  return new SESClient({
+    region,
+    credentials: { accessKeyId, secretAccessKey },
+  });
+}
+
 export async function submitContactForm(
   formData: ContactFormData
 ): Promise<ContactActionResult> {
@@ -110,37 +143,52 @@ export async function submitContactForm(
     };
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("[contact] RESEND_API_KEY is not configured.");
+  const fromEmail = process.env.SES_FROM_EMAIL;
+  const toEmail = process.env.CONTACT_TO_EMAIL;
+
+  if (!fromEmail || !toEmail) {
+    console.error("[contact] SES_FROM_EMAIL or CONTACT_TO_EMAIL is not configured.");
     return {
       success: false,
       error: "Serviço de e-mail não configurado. Entre em contato por outro canal.",
     };
   }
 
-  const resend = new Resend(apiKey);
-  const toEmail = process.env.CONTACT_TO_EMAIL || "contact@office-today.com";
-
   const { name, company, email, phone, service, message } = formData;
 
+  let sesClient: SESClient;
   try {
-    const { error } = await resend.emails.send({
-      from: "Office Today Website <noreply@office-today.com>",
-      to: toEmail,
-      replyTo: email,
-      subject: `Novo contato: ${name}${company ? ` — ${company}` : ""}`,
-      html: buildEmailHtml({ name, company, email, phone, service, message }),
-    });
+    sesClient = getSESClient();
+  } catch (err) {
+    console.error("[contact] SES configuration error:", err);
+    return {
+      success: false,
+      error: "Serviço de e-mail não configurado. Entre em contato por outro canal.",
+    };
+  }
 
-    if (error) {
-      console.error("[contact] Resend error:", error);
-      return { success: false, error: "Erro ao enviar mensagem. Tente novamente em breve." };
-    }
+  try {
+    await sesClient.send(
+      new SendEmailCommand({
+        Source: fromEmail,
+        Destination: { ToAddresses: [toEmail] },
+        ReplyToAddresses: [email],
+        Message: {
+          Subject: {
+            Data: `Novo contato: ${name}${company ? ` — ${company}` : ""}`,
+            Charset: "UTF-8",
+          },
+          Body: {
+            Html: { Data: buildEmailHtml({ name, company, email, phone, service, message }), Charset: "UTF-8" },
+            Text: { Data: buildEmailText({ name, company, email, phone, service, message }), Charset: "UTF-8" },
+          },
+        },
+      })
+    );
 
     return { success: true };
   } catch (err) {
-    console.error("[contact] Unexpected error:", err);
-    return { success: false, error: "Erro inesperado. Por favor, tente novamente." };
+    console.error("[contact] SES send error:", err);
+    return { success: false, error: "Erro ao enviar mensagem. Tente novamente em breve." };
   }
 }
