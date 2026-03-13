@@ -1,86 +1,36 @@
-# Office Today Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Official website for **Office Today**, developed using **Next.js** and deployed on **Vercel**.
+## Getting Started
 
-This project replaces the previous website hosted on **Duda.co**, with the goal of reducing infrastructure costs while maintaining high performance, SEO, and marketing flexibility.
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-# Project Overview
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The website is being rebuilt using a modern stack based on:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Next.js
-- Vercel
-- GitHub
-- Tailwind CSS (planned)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-The design, content, branding, and structure are inspired by the previous website hosted on Duda.
+## Learn More
 
-A backup of the Duda website is kept in this repository for reference.
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-# Development Workflow
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-The project is developed using a **three-role workflow**:
+## Deploy on Vercel
 
-**Architecture and Product**
-Diogo Santana + ChatGPT
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Responsible for:
-- product structure
-- marketing strategy
-- SEO planning
-- page architecture
-- UI/UX decisions
-
-**Implementation**
-Claude Code
-
-Responsible for:
-- frontend development
-- Next.js structure
-- components
-- responsive layout
-- integration with Vercel
-
----
-
-# Deployment
-
-The website is automatically deployed using **Vercel**, connected to this GitHub repository.
-
-Each push to the `main` branch triggers a new deployment.
-
----
-
-# Domain
-
-Production domain:
-
-https://www.office-today.com
-
-/app
-/components
-/public
-/styles
-/backup-duda
-
----
-
-# Notes
-
-The `/backup-duda` folder contains the exported content from the original Duda website and is used only as a reference for rebuilding the pages.
-
-It will not be used in production.
-
----
-
-# Maintained by
-
-SAX Group LLC
-
----
-
-# Repository Structure (planned)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
