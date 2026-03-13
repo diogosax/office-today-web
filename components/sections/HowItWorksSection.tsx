@@ -3,12 +3,12 @@ import Image from "next/image";
 const steps = [
   {
     illustration: "/images/illustrations/manutencao.svg",
-    illustrationAlt: "Técnico realizando manutenção em equipamento",
-    eyebrow: "Sem preocupações",
+    illustrationAlt: "Técnico realizando manutenção em equipamento de TI",
+    eyebrow: "Gestão Completa",
     heading: "Manutenção por Nossa Conta",
     body: [
-      "Com a locação de equipamentos, sua empresa evita altos custos iniciais, ganha flexibilidade para expandir ou atualizar seus dispositivos e reduz o tempo de inatividade.",
-      "Cuidamos de toda a gestão e manutenção dos equipamentos, além de oferecer um suporte personalizado para cada setor, garantindo que suas operações nunca parem e sempre tenham a tecnologia ideal para cada momento.",
+      "Com a locação de equipamentos, sua empresa elimina custos iniciais elevados, ganha flexibilidade para escalar ou atualizar os dispositivos e reduz o tempo de inatividade operacional.",
+      "Assumimos toda a gestão e manutenção do parque de equipamentos, com suporte técnico dedicado a cada setor — para que as suas operações nunca parem e sempre contem com a tecnologia adequada.",
     ],
     imageRight: false,
   },
@@ -16,10 +16,10 @@ const steps = [
     illustration: "/images/illustrations/especialista.svg",
     illustrationAlt: "Especialista de TI auxiliando equipe empresarial",
     eyebrow: "Hardware as a Service",
-    heading: "TI Terceirizado, Negócio Focado",
+    heading: "Terceirize o TI. Foque no Negócio.",
     body: [
-      "Com o modelo Hardware as a Service (HaaS), a Office Today permite que sua empresa terceirize grande parte ou até mesmo todas as necessidades internas de TI.",
-      "Nossa solução de locação de tecnologia é projetada para atender as necessidades da empresa moderna, garantindo acesso a equipamentos de ponta sem custos elevados de aquisição. Deixe a gestão e manutenção conosco, e foque no que realmente importa: o crescimento do seu negócio.",
+      "Com o modelo Hardware as a Service (HaaS), a Office Today permite que a sua empresa externalize parte ou a totalidade das necessidades de infraestrutura de TI.",
+      "Nossa solução é projetada para a empresa moderna: acesso a equipamentos de ponta, sem o custo de aquisição, com custos previsíveis e gestão centralizada. Você foca no crescimento — o TI fica por nossa conta.",
     ],
     imageRight: true,
   },
@@ -29,10 +29,10 @@ export default function HowItWorksSection() {
   return (
     <section
       aria-labelledby="how-it-works-heading"
-      className="bg-surface-alt py-16 md:py-20 lg:py-24"
+      className="bg-surface-alt py-14 md:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <h2
             id="how-it-works-heading"
             className="font-display font-700 text-3xl md:text-4xl lg:text-[2.75rem] leading-tight text-ink"
@@ -40,12 +40,12 @@ export default function HowItWorksSection() {
             Como Funciona
           </h2>
           <p className="mt-4 text-base md:text-lg text-ink-muted max-w-2xl mx-auto leading-relaxed">
-            Um modelo completo que cobre equipamento, gestão e suporte — tudo em uma mensalidade
-            previsível.
+            Equipamento, gestão e suporte técnico em uma única mensalidade — previsível e sem
+            surpresas.
           </p>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-14">
           {steps.map((step) => (
             <div
               key={step.heading}

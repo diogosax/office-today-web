@@ -7,7 +7,7 @@ const serviceLinks = [
 ];
 
 const companyLinks = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Início" },
   { href: "/blog", label: "Blog" },
   { href: "/contato", label: "Contato" },
 ];
@@ -15,7 +15,7 @@ const companyLinks = [
 export default function Footer() {
   return (
     <footer className="bg-surface-dark text-white" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
@@ -29,8 +29,8 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed max-w-xs">
-              Locação e gestão de hardware corporativo. Equipe sua empresa com tecnologia de ponta
-              de forma econômica, flexível e conveniente.
+              Soluções completas de locação e gestão de hardware para empresas. Tecnologia de ponta,
+              custos previsíveis e suporte técnico especializado.
             </p>
             {/* LinkedIn */}
             <a
@@ -91,11 +91,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
-          <p>© {new Date().getFullYear()} Sax Group · <strong className="text-white/60 font-display font-600">Office Today</strong></p>
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
           <p>
-            Representante{" "}
-            <strong className="text-brand font-display font-600">Grupo Office Total S.A</strong>
+            © {new Date().getFullYear()}{" "}
+            <strong className="text-white/60 font-display font-500">Office Today</strong>
+            {" "}· Sax Group
+          </p>
+          <p>
+            Uma empresa do{" "}
+            <strong className="text-white/60 font-display font-500">Grupo Office Total S.A.</strong>
           </p>
         </div>
       </div>

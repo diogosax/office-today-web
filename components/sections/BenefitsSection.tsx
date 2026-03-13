@@ -72,9 +72,9 @@ const benefits = [
   },
   {
     icon: <TailoredIcon />,
-    title: "Tailor-made",
+    title: "Solução sob Medida",
     description:
-      "Equipamentos selecionados e pré-configurados para as necessidades específicas da sua empresa.",
+      "Equipamentos selecionados e pré-configurados de acordo com as necessidades específicas de cada empresa.",
   },
 ];
 
@@ -82,12 +82,12 @@ export default function BenefitsSection() {
   return (
     <section
       aria-labelledby="benefits-heading"
-      className="bg-surface py-16 md:py-20 lg:py-24"
+      className="bg-surface py-14 md:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           id="benefits-heading"
-          subtitle="Descubra os principais benefícios do outsourcing de equipamentos e como a Office Today pode transformar o TI da sua empresa."
+          subtitle="Veja como o modelo de locação gerenciada reduz custos, elimina imprevistos e libera sua equipe para focar no que gera resultado."
         >
           Benefícios do{" "}
           <span className="text-brand">Outsourcing</span>{" "}

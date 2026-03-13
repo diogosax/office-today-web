@@ -4,7 +4,7 @@ export default function CtaBandSection() {
   return (
     <section
       aria-labelledby="cta-heading"
-      className="bg-surface-dark py-20 md:py-24"
+      className="bg-surface-dark py-16 md:py-20"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="inline-block bg-brand/20 text-brand-light font-display font-600 text-xs uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
@@ -20,10 +20,10 @@ export default function CtaBandSection() {
           <strong className="font-800 not-italic text-brand">TI</strong>
         </h2>
         <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
-          Fale com um de nossos especialistas e descubra como sua empresa pode crescer sem as
-          preocupações da gestão de TI interno.
+          Fale com nossos especialistas e descubra como simplificar o TI da sua empresa com
+          previsibilidade de custos, suporte dedicado e equipamentos sempre atualizados.
         </p>
-        <div className="mt-10">
+        <div className="mt-8">
           <Button href="/contato" variant="primary" className="px-10 py-4 text-base">
             Fazer Orçamento Gratuito
           </Button>
