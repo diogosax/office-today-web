@@ -21,17 +21,9 @@ export default function Footer() {
           </p>
 
           {/* Institutional */}
-          <div className="text-center">
-            <p className="text-sm text-gray-400">
-              Um representante do{" "}
-              <strong className="font-semibold text-brand">
-                Grupo Office Total S.A
-              </strong>
-            </p>
-            <p className="mt-1 text-xs text-gray-500">
-              Atuação nos Estados Unidos e no Brasil
-            </p>
-          </div>
+          <p className="text-xs text-gray-500 text-center">
+            Um representante do Grupo Office Total S.A
+          </p>
 
           {/* Nav + Social */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
