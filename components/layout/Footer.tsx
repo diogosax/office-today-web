@@ -123,7 +123,7 @@ export default function Footer() {
             {" "}· Sax Group
           </p>
           <p>
-            Uma empresa do{" "}
+            Um parceiro do{" "}
             <strong className="text-white/60 font-display font-500">Grupo Office Total S.A.</strong>
           </p>
         </div>
