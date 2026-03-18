@@ -16,6 +16,7 @@ const navLinks = [
       { href: "/servicos/tecnologias-para-area-da-saude", label: "Tecnologias para Área da Saúde" },
     ],
   },
+  { href: "/quem-somos", label: "Quem Somos" },
   { href: "/blog", label: "Blog" },
   { href: "/contato", label: "Contato" },
 ];
@@ -231,6 +232,7 @@ export default function Header() {
             </NavLink>
           </div>
 
+          <NavLink href="/quem-somos" mobile onClick={closeMobile}>Quem Somos</NavLink>
           <NavLink href="/blog" mobile onClick={closeMobile}>Blog</NavLink>
           <NavLink href="/contato" mobile onClick={closeMobile}>Contato</NavLink>
         </nav>
