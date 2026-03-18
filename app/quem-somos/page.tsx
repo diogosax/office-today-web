@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Quem Somos | Office Today",
@@ -32,7 +34,9 @@ const pillars = [
 
 export default function QuemSomos() {
   return (
-    <main>
+    <>
+      <Header />
+      <main>
       {/* Hero */}
       <section className="bg-gray-900 text-white py-24 px-4">
         <div className="mx-auto max-w-4xl text-center">
@@ -189,5 +193,7 @@ export default function QuemSomos() {
         </div>
       </section>
     </main>
+      <Footer />
+    </>
   );
 }
