@@ -9,6 +9,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { href: "/", label: "Início" },
+  { href: "/quem-somos", label: "Quem Somos" },
   { href: "/blog", label: "Blog" },
   { href: "/contato", label: "Contato" },
 ];
