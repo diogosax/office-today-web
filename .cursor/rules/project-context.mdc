@@ -1,0 +1,5 @@
+---
+description: Shared versioned project context for this repository
+alwaysApply: true
+---
+Read AGENTS.md, CLAUDE.md and docs/knowledge/README.md at the start of a task. Follow the short reading order there and existing project-specific instructions. Read further sources only when relevant. Do not confuse the institutional site with the platform. Keep state, decisions and handoffs in the shared files instead of duplicating them in tool-specific memories. No automatic deploy or paid calls during context loading.

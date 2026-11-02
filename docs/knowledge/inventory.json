@@ -1,0 +1,29 @@
+{
+  "repository": "diogosax/office-today-web",
+  "base_branch": "main",
+  "source_commit": "6a182660f3a156c870c658118044e868a522471a",
+  "inspected_on": "2026-11-02",
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "b0b459442d5e80dae2704dbb26bebf8bf62db84480abb2c3f589376e7e078391"
+    }
+  ],
+  "packages": {
+    "package.json": {
+      "name": "office-today-web",
+      "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint"
+      },
+      "dependencies": {
+        "@aws-sdk/client-ses": "^3.1008.0",
+        "next": "16.1.6",
+        "react": "19.2.3",
+        "react-dom": "19.2.3"
+      }
+    }
+  }
+}
