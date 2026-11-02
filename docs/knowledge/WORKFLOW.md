@@ -1,18 +1,20 @@
-# Protocolo entre ferramentas
+# Working protocol across tools
 
-## Começar
+## Start
 
-Conferir remote, branch e estado do checkout. Ler as instruções existentes e esta base; anexar somente fontes relevantes à tarefa. Não depender do histórico de outro chat ou presumir acesso automático a repositórios irmãos.
+Check the remote, branch and checkout state. Read existing instructions and this knowledge base; load only task-relevant sources. Do not depend on another chat's history or assume automatic access to sibling repositories.
 
-ChatGPT e proprietário definem resultado/aceite; Codex ou agente Cursor implementa conforme a tarefa; Claude Desktop ou Ask revisa quando necessário. O responsável por uma alteração não precisa passar toda tarefa pelos três serviços. Respeitar regras específicas e decisões visuais existentes.
+ChatGPT and the owner define outcomes and acceptance criteria. Codex or the Cursor agent implements the assigned task; Claude Desktop or Ask reviews when useful. Work need not pass through all three services. Preserve project-specific rules and approved visual decisions.
 
-## Executar e encerrar
+English is canonical for shared technical documentation, agent prompts and handoffs. Owner-facing discussion may remain in Brazilian Portuguese; product UI follows its audience. Later multilingual support content is separate from these technical source records.
 
-Uma tarefa delimitada por branch e PR; um escritor por checkout. Mudanças de contrato entre plataforma e site requerem referências em ambos os repositórios. No encerramento atualizar o estado e o repasse, com evidências verificáveis e próxima ação. Nunca registrar segredos, dados privados de clientes ou transcrições completas por rotina.
+## Execute and close
 
-Escolher verificações proporcionais. Não executar scripts de deploy, migração, bootstrap de operadores, e-mail, ingestão ou billing durante uma simples leitura. Publicação da base em branch não autoriza merge ou deploy; respeitar o fluxo já documentado no projeto.
+Use a bounded task per branch/PR and one writer per checkout. Cross-repository contract changes require references in both repositories. Finish with updated state and handoff, verifiable evidence and a next action. Never store secrets, private customer data or complete chat transcripts by routine.
 
-## Comandos existentes (inventário, não execução automática)
+Choose proportionate checks. Do not run deployment, migration, operator bootstrap, email, ingestion or billing scripts during context loading. Publishing documentation to a branch does not authorize merge or deployment; retain the repository's existing release flow.
+
+## Existing commands (inventory, not automatic execution)
 
 ### `package.json`
 
@@ -21,6 +23,8 @@ Escolher verificações proporcionais. Não executar scripts de deploy, migraç�
 - `start`: `next start`
 - `lint`: `eslint`
 
-## Teste de compreensão em uma conversa nova
+## Fresh-conversation comprehension check
 
-Peça ao assistente, sem alterar arquivos: identifique o repositório e a marca; diferencie plataforma e site; liste capacidades observadas e pendências com fontes; explique como validar a próxima mudança; proponha um único próximo passo. Corrija os documentos se ele depender de adivinhação. Esse teste interativo ainda deve ser feito no Cursor; a validação documental não o substitui.
+Without editing files, ask the assistant to identify the repository and brand, distinguish platform and website, list observed capabilities and pending items with sources, explain validation requirements and propose one next step. Correct documentation when the answer requires guessing. A static documentation check does not replace this interactive test.
+
+This interactive test remains pending for this project. Do not infer success from another project's test.

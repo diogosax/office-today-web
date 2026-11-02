@@ -1,15 +1,19 @@
-# Office Today — base compartilhada
+# Office Today — shared knowledge base
 
-Repositório: `diogosax/office-today-web`. Papel: **site institucional**. Revisão: 2026-11-02.
+Repository: `diogosax/office-today-web`. Role: **institutional website**. Updated: 2026-11-02.
 
-## Leitura inicial curta
+## Short initial reading order
 
-1. [Visão e limites](PROJECT.md).
-2. [Estado observado e fontes](STATE.md).
-3. [Protocolo de trabalho](WORKFLOW.md).
-4. [Continuidade e próxima decisão](CONTINUITY.md).
-5. [Índice de evidências](SOURCES.md), apenas a parte relevante à tarefa.
+1. [Project scope and boundaries](PROJECT.md).
+2. [Observed state and sources](STATE.md).
+3. [Working protocol](WORKFLOW.md).
+4. [Continuity and next decision](CONTINUITY.md).
+5. [Evidence index](SOURCES.md), only as needed for the task.
 
-Cursor, Codex e Claude consultam os mesmos arquivos. Esta base é contexto versionado; não constitui treinamento permanente, aprovação comercial, publicação ou evidência de produção.
+Cursor, Codex and Claude use the same versioned files. This is task context, not permanent model training, commercial approval, publication or evidence of live operation.
 
-Ao concluir uma tarefa, atualizar STATE e CONTINUITY com evidências novas. Decisões novas ficam no registro canônico existente, apontado em SOURCES, ou em DECISIONS quando não houver registro anterior.
+Update STATE and CONTINUITY after material changes. Record product decisions in the existing canonical log linked by SOURCES, or in DECISIONS when no earlier log exists.
+
+## Language convention
+
+English is the canonical language for shared technical documentation, agent prompts and handoffs. Conversations with the owner may remain in Brazilian Portuguese. Keep code identifiers, repository names, paths, source quotations and existing historical instructions unchanged. Multilingual user/support documentation will be developed separately; do not duplicate the technical source in multiple languages by default.

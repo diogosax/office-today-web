@@ -1,22 +1,21 @@
-# Office Today: visão e limites
+# Office Today: scope and boundaries
 
-## Identidade
+## Identity
 
-- Repositório: https://github.com/diogosax/office-today-web
-- Papel: site institucional.
-- Base GitHub inspecionada: `main`.
-- Objetivo: Site B2B da Office Today, reconstruído a partir de referências Duda.
+- Repository: https://github.com/diogosax/office-today-web
+- Role: institutional website.
+- Inspected GitHub base branch: `main`.
+- Purpose: Office Today B2B website, rebuilt from Duda references.
 
-## Relação entre plataforma e site
+## Platform and website relationship
 
-Este é o site institucional. Uma plataforma correspondente não foi identificada no inventário acessível; não inferir que ela não existe em outro serviço ou conta.
+This repository owns the institutional website. A corresponding platform repository was not identified in the accessible inventory; that does not establish its absence from another account or service.
 
-## Limites específicos
+## Project-specific boundaries
 
-- Migrar assets intencionalmente; não copiar runtime Duda.
-- Preservar posicionamento e identidade aprovados.
-- Repositório público: não incluir propostas privadas, acessos ou dados de clientes.
+- Migrate assets intentionally; do not copy the Duda runtime.
+- Preserve approved positioning and brand identity.
+- This repository is public; exclude private proposals, access details and customer data.
+## Evidence and interpretation
 
-## Evidência e interpretação
-
-Separar sempre: **código observado**, **resultado de teste registrado**, **decisão do proprietário**, **proposta** e **pendência**. Existência de rota, texto comercial, dependência ou script não prova operação em produção. Não copiar claims, identidade, preços ou autorizações de outra marca.
+Always distinguish **observed code**, **recorded test results**, **owner decisions**, **proposals** and **open questions**. A route, marketing statement, dependency or script does not establish live operation. Do not copy claims, identity, pricing or authorization from another brand.

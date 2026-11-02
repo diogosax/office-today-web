@@ -1,18 +1,22 @@
-# Continuidade — Office Today
+# Continuity — Office Today
 
-## Ponto de retomada
+## Resume point
 
-Entrega atual: base compartilhada de conhecimento para `diogosax/office-today-web`. Nenhuma tarefa funcional está em execução nesta cópia. O proprietário ainda decidirá prioridades entre KeepsAlive, Border-B e os demais projetos.
+Current deliverable: shared knowledge for `diogosax/office-today-web`, now maintained in English. No functional task is in progress in this checkout. The owner has not yet chosen between KeepsAlive, Border-B and other projects.
 
-## Próximo passo útil
+Fresh-conversation comprehension is still pending for this project.
 
-1. Abrir este repositório na branch que contém a base.
-2. Fazer leitura inicial de README, PROJECT, STATE e fontes obrigatórias.
-3. Informar identidade, papel do repositório, evidências, lacunas e próximo passo proposto.
-4. Aguardar a escolha da tarefa funcional; não iniciar deploy, migrations, integrações ou chamadas pagas como parte da leitura.
+## Next useful step
 
-## Repasse ao trocar de ferramenta
+1. Open the repository on the branch containing the knowledge base.
+2. Read the short initial set and the existing mandatory project instructions.
+3. Report repository identity, observed capabilities, evidence, gaps and a proposed next step.
+4. Await the chosen functional task; do not begin deployment, migration, integrations or paid requests merely to load context.
 
-Registrar no encerramento: tarefa e critérios de aceite; branch + commit; arquivos alterados; verificações realizadas e resultado; decisões; impedimentos; próximo passo. Um agente escreve por checkout; trabalho paralelo requer branches e cópias isoladas.
 
-A chave do provedor pertence à configuração local da ferramenta, nunca a este arquivo. O limite financeiro do piloto é tratado no Console; instruções em texto não são mecanismo de bloqueio de cobrança.
+
+## Handoff between tools
+
+At task completion record: task and acceptance criteria; branch and commit; changed files; checks and results; decisions; blockers; next action. Use one writer per checkout; parallel work requires isolated branches/checkouts.
+
+Provider keys belong in local tool configuration, never in this file. The pilot's financial limit is configured in the provider Console; written instructions do not enforce billing limits.

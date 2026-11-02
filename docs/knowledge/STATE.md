@@ -1,30 +1,36 @@
-# Estado observado em 2026-11-02
+# Observed state — 2026-11-02
 
-## Snapshot verificável
+## Verifiable source snapshot
 
-- Repositório: `diogosax/office-today-web`.
-- Branch-base: `main`.
-- Commit inspecionado: [`6a182660f3a1`](https://github.com/diogosax/office-today-web/commit/6a182660f3a156c870c658118044e868a522471a).
-- Inspeção: arquivos versionados e documentação, sem deploy, execução de aplicação ou validação em produção.
+- Repository: `diogosax/office-today-web`.
+- Base branch: `main`.
+- Inspected source commit: [`6a182660f3a1`](https://github.com/diogosax/office-today-web/commit/6a182660f3a156c870c658118044e868a522471a).
+- Inspection scope: tracked files and documentation, without application execution, deployment or production validation.
+- The source commit predates the knowledge-base commits. Do not assume it is always the immediate parent of the current HEAD after documentation revisions.
 
-## O que foi observado
+## Observations
 
-Next.js com app, components e backup-duda de referência. README registra Vercel e domínio www.office-today.com; operação e DNS não foram verificados nesta tarefa.
+Next.js application with app, components and the reference backup-duda folder. README records Vercel and www.office-today.com; live operation and DNS were not verified in this task.
 
-Pastas técnicas de primeiro nível observadas: `app/`, `backup-duda/`, `components/`, `public/`.
+Observed first-level technical directories: `app/`, `backup-duda/`, `components/`, `public/`.
 
-## Fontes prioritárias
+## Priority sources
 
 - [`README.md`](../../README.md)
 - [`app/page.tsx`](../../app/page.tsx)
 
-## Lacunas e verificação pendente
+## Gaps and pending checks
 
-- Revalidar branch e alterações locais antes de continuar; este snapshot não acompanha automaticamente mudanças futuras.
-- Fluxos reais, infraestrutura ativa, DNS, credenciais e clientes não foram auditados.
-- Avaliar cada capacidade contra código + testes + evidência operacional atual, especialmente quando README e incrementos divergem.
-- Comparar branches/PRs abertos antes de concluir que falta implementação. O inventário desta base usa a branch-base, não todas as branches.
+- Recheck branch and local changes before resuming; this snapshot does not automatically track later work.
+- Live workflows, active infrastructure, DNS, credentials and customers were not audited.
+- Assess each capability against code, relevant tests and current operational evidence, especially where historical README passages and later increments differ.
+- Compare relevant branches and open PRs before concluding that implementation is missing. This inventory covers the recorded base branch, not every branch.
+- inventory.json indexes documentation and package manifests; it is not the product's asset inventory.
 
-## Resultado desta entrega
+## Fresh-conversation comprehension test
 
-Base de contexto e adaptadores de leitura preparados. Nenhuma funcionalidade do produto foi alterada. Prioridade de desenvolvimento entre projetos ainda será decidida com o proprietário.
+Not yet performed for this project. The KeepsAlive workspace test does not validate this repository.
+
+## This delivery
+
+Shared technical context and assistant entry points are in English. Existing historical/project instructions are preserved. No product functionality was changed. Development priority across projects remains an owner decision.

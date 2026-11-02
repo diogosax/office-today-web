@@ -1,20 +1,20 @@
-# Fontes e navegação
+# Sources and navigation
 
-Snapshot `6a182660f3a156c870c658118044e868a522471a`, branch `main`, 2026-11-02. Inventário estático; conteúdo histórico não comprova estado operacional atual.
+Source snapshot `6a182660f3a156c870c658118044e868a522471a`, branch `main`, inspected on 2026-11-02. This is a static inventory; historical documentation is not proof of current operation.
 
-## Começar por estas fontes
+## Start with these sources
 
 - [`README.md`](../../README.md)
 - [`app/page.tsx`](../../app/page.tsx)
 
-## Inventário ampliado
+## Extended inventory
 
-[Inventário JSON](inventory.json): documentos preexistentes com SHA-256, manifestos e scripts. Use para localizar uma questão específica; não carregue todos os documentos em cada conversa. Novos arquivos desta base ficam fora do inventário de fontes para evitar autorreferência.
+[Documentation inventory JSON](inventory.json) lists pre-existing documents with SHA-256 and package manifests/scripts. Use it to find a specific topic, not to load every document into each conversation. It is a documentation index, not an asset inventory. Knowledge-base files are excluded from their own source inventory to avoid circular references.
 
-## Como resolver divergências
+## Resolving disagreements
 
-Conferir instrução atual do proprietário, regras aplicáveis, decisões datadas, código e evidências do incremento. Registrar o conflito; não corrigir automaticamente documentos históricos nem transformar relatos em prova de produção. Branches e alterações locais podem conter trabalho ainda não integrado.
+Check the owner's current instruction, applicable project rules, dated decisions, code and increment-specific evidence. Record conflicts; do not silently rewrite historical records or turn reports into operational proof. Other branches and local edits may contain work not yet integrated.
 
-## Privacidade
+## Privacy
 
-Não incorporar credenciais, .env, identificadores de clientes ou transcrições privadas. Repositórios públicos recebem apenas contexto público próprio; documentação privada entre projetos permanece fora deles.
+Do not include credentials, .env files, customer identifiers or private transcripts. Public repositories contain only their own public context; private cross-project documentation remains outside them.
