@@ -28,3 +28,7 @@ Choose proportionate checks. Do not run deployment, migration, operator bootstra
 Without editing files, ask the assistant to identify the repository and brand, distinguish platform and website, list observed capabilities and pending items with sources, explain validation requirements and propose one next step. Correct documentation when the answer requires guessing. A static documentation check does not replace this interactive test.
 
 This interactive test remains pending for this project. Do not infer success from another project's test.
+
+## Release execution protocol
+
+For PR, merge, deployment or incident work read [release and recovery](RELEASE_WORKFLOW.md) and its canonical project sources. It records checked evidence, unresolved gaps and the current no-publication boundary. Loading this context does not authorize execution.

@@ -34,3 +34,9 @@ Not yet performed for this project. The KeepsAlive workspace test does not valid
 ## This delivery
 
 Shared technical context and assistant entry points are in English. Existing historical/project instructions are preserved. No product functionality was changed. Development priority across projects remains an owner decision.
+
+## Deployment/recovery review — 2026-11-02
+
+See [reviewed release procedure and validation results](RELEASE_WORKFLOW.md). Source review is complete for this record; live deployment/recovery is not validated. No release, migration, restart, restoration or infrastructure change was executed. Treat local passing checks and historical runbooks at their stated evidence level.
+
+Documentation merge scope (2026-11-02): the owner authorized squash-merging this knowledge-base PR into `main` only; see [CONTINUITY](CONTINUITY.md#documentation-pr-merge-authorization--2026-11-02). Merge status is recorded on the PR, not in this snapshot.
