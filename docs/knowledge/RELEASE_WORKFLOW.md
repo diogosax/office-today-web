@@ -10,7 +10,7 @@ The 2026-11-02 deployment/recovery review below is historical evidence at its st
 
 For that previous site delivery only, the owner explicitly accepted automatic Vercel republication before the merge. That consumed authorization is not standing approval for future previews or production publishing.
 
-Current mission authority, merge/deployment separation and closure follow [AGENTS](../../AGENTS.md#mission-controlled-delivery) and [CONTINUITY](CONTINUITY.md). The present organizational mission authorizes documentation/process work only, with conditional merge only when required checks and publication separation permit it. No live deploy, migration, restart, restore, paid call, infrastructure change or product phase is authorized by this historical review.
+Current mission authority, merge/deployment separation and closure follow [AGENTS](../../AGENTS.md#mission-controlled-delivery) and [CONTINUITY](CONTINUITY.md). The present organizational mission authorizes documentation/process work only, with conditional merge only when required checks and publication separation permit it. No live deploy, migration, restart, restore, paid call, infrastructure change or product phase is authorized by this historical review. The owner separately approved previews and production republication of the current eight documentation PRs on 2026-11-03; only that bounded site publication is authorized, through the existing Git integration.
 
 ## Shared PR and release flow
 

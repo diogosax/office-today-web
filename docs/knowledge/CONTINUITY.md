@@ -17,7 +17,7 @@ Current engineering scope: [ENG-2026-11-03-WORKFLOW](../missions/2026-11-03-work
 
 ## Blockers
 
-- Automatic Vercel Preview on branch/PR pushes and Production on main were recorded in the prior release review. This task has no new publication authorization. Prepare locally and hold any coupled push/PR/merge until the publication consequence is explicitly authorized.
+- The owner explicitly authorized Preview and Production republication for these eight documentation PRs on 2026-11-03, after checks. This applies only to this engineering delivery through the existing Vercel Git integration; it is not standing publication authority for future missions. No hosting/settings, runtime or business changes are authorized.
 - Project-specific operational, recovery and product gaps remain unresolved at their recorded evidence level. Shared documentation does not certify readiness, activate monitoring, change provider rights or approve commercial claims.
 - Do not infer enforceable branch protection or required checks from these written rules; inspect actual repository controls before conditional merge.
 
