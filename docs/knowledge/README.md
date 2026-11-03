@@ -12,7 +12,7 @@ Repository: `diogosax/office-today-web`. Role: **institutional website**. Update
 
 Cursor, Codex and Claude use the same versioned files. This is task context, not permanent model training, commercial approval, publication or evidence of live operation.
 
-Update STATE and CONTINUITY after material changes. Record product decisions in the existing canonical log linked by SOURCES, or in DECISIONS when no earlier log exists.
+CONTINUITY is the single mutable mission and next-action handoff. STATE contains dated product observations, not live mission state. Update it only when its product evidence changes. Record product decisions in the existing canonical log linked by SOURCES, or in DECISIONS when no earlier log exists.
 
 ## Language convention
 
@@ -21,3 +21,7 @@ English is the canonical language for shared technical documentation, agent prom
 ## Deployment and recovery context
 
 For PR, merge, deployment or incident work read [release and recovery](RELEASE_WORKFLOW.md) and its canonical project sources. It records checked evidence, unresolved gaps and the current no-publication boundary. Loading this context does not authorize execution.
+
+## Mission authority and closure
+
+Read [AGENTS](../../AGENTS.md#mission-controlled-delivery), use the [mission template](../missions/TEMPLATE.md) and follow the [mission lifecycle](WORKFLOW.md#mission-lifecycle). Mission files hold approved scope/acceptance; existing business and architecture logs remain canonical. PRs hold final merge/check evidence; do not copy changing PR state across documents.

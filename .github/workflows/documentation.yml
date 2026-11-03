@@ -1,0 +1,41 @@
+name: documentation
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "AGENTS.md"
+      - "CLAUDE.md"
+      - "docs/knowledge/**"
+      - "docs/missions/**"
+      - "scripts/check-project-context.py"
+      - ".github/*[Tt][Ee][Mm][Pp][Ll][Aa][Tt][Ee]*"
+      - ".github/workflows/documentation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "AGENTS.md"
+      - "CLAUDE.md"
+      - "docs/knowledge/**"
+      - "docs/missions/**"
+      - "scripts/check-project-context.py"
+      - ".github/*[Tt][Ee][Mm][Pp][Ll][Aa][Tt][Ee]*"
+      - ".github/workflows/documentation.yml"
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/dev' && github.ref != 'refs/heads/main' }}
+jobs:
+  context:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 2
+          persist-credentials: false
+      - name: Verify project context
+        run: python3 scripts/check-project-context.py
+      - name: Verify patch whitespace
+        run: git diff --check HEAD^ HEAD

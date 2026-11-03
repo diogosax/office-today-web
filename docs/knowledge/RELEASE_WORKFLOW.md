@@ -6,9 +6,11 @@ Inspected source: [`6a182660f3a1`](https://github.com/diogosax/office-today-web/
 
 ## Scope and authority
 
-The owner requested deployment/recovery procedure validation and shared documentation, **without publishing a release**. This record permits no live deploy, migration, restart, restoration, DNS/IAM change, Connector publication or automatic promotion. The owner later separately authorized squash-merging this documentation PR into its recorded base (`main`) after satisfactory review and applicable checks, to be held if the merge would trigger an application production deployment; that merge authorization is not deployment authorization. Existing clear authorization for a future bounded action persists; avoid repeated approval questions for routine substeps.
+The 2026-11-02 deployment/recovery review below is historical evidence at its stated limits. Its shared-context PR [#1](https://github.com/diogosax/office-today-web/pull/1) was merged at `b6f100aa1c2ac4500be29ac3be8c23098caa901f`. That delivery is closed; old no-merge wording is not an active instruction.
 
-Evidence levels: source review and local checks are recorded below. A historical runbook, successful static guard or mocked test is not a successful host rehearsal. No live EC2 connection, backup creation, restore drill or cloud workflow dispatch was performed in this review. Live readiness remains unverified.
+For that previous site delivery only, the owner explicitly accepted automatic Vercel republication before the merge. That consumed authorization is not standing approval for future previews or production publishing.
+
+Current mission authority, merge/deployment separation and closure follow [AGENTS](../../AGENTS.md#mission-controlled-delivery) and [CONTINUITY](CONTINUITY.md). The present organizational mission authorizes documentation/process work only, with conditional merge only when required checks and publication separation permit it. No live deploy, migration, restart, restore, paid call, infrastructure change or product phase is authorized by this historical review.
 
 ## Shared PR and release flow
 
@@ -39,7 +41,7 @@ If tooling cannot establish these facts, record the gap and prepare the missing 
 
 ## Automation status
 
-This documentation does not configure CI, branch protections, AWS OIDC, Systems Manager, approvals or deployment jobs. Preserve the current mechanism. Before adding automation, reconcile each project's exact-SHA selection, fail-closed verification and recovery. No auto-merge or auto-deploy is introduced. GitHub protection availability and cloud permissions must be verified for the actual account; do not promise enforced gates from written policy.
+The historical review below did not configure CI, branch protections, AWS OIDC, Systems Manager, approvals or deployment jobs. The current engineering follow-up adds only read-only documentation CI; it adds no deployment or merge authority to workflows. Preserve the current mechanism. Before adding automation, reconcile each project's exact-SHA selection, fail-closed verification and recovery. No auto-merge or auto-deploy is introduced. GitHub protection availability and cloud permissions must be verified for the actual account; do not promise enforced gates from written policy.
 
 ## Institutional-site adapter
 
@@ -47,7 +49,7 @@ This repository is a website, not its sibling platform's EC2 runtime. [README](.
 
 Use a preview or isolated local build when separately assigned a site change; verify routes, links, assets, accessibility and relevant forms without submitting live messages. A site PR may publish automatically after merge, so review that consequence before authorization. Select a previously verified deployment or artifact for rollback only after confirming the actual host's supported process and environment. No hosting settings were changed or live rollback tested.
 
-This review adds only context documentation. The owner authorized merging this documentation PR only if the merge would not trigger an application production deployment. Because the evidence above indicates that a merge to `main` would trigger a Vercel production deployment, the merge is held for an explicit owner decision. Do not promote a preview or change deployment/ignored-build settings to work around the hold. Website and platform releases remain separate and cross-linked when dependent.
+The previous review initially held its site merge because main publishes automatically. The owner subsequently accepted that specific republication and the linked PR merged. Future site changes still need their own applicable publication authorization before any coupled push, PR or merge. Do not promote a preview or change deployment/ignored-build settings to work around the hold. Website and platform releases remain separate and cross-linked when dependent.
 
 ### Checks actually run — 2026-11-02
 
